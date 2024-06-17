@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <div class="heading">
+        <a href="Homepage.html" style="position:inherit; left:15px; top: 10px;"><img src="logo.png" alt="logo" style="border-radius: 20%;"></a>
+        <a href="aboutme.html" style='position:inherit; left:450px; top:20px; font-size:xx-large; color:rgba(36, 222, 141, 0.902);'>About Me</a>
+        <a href="dreamr.html" style='position:inherit; left:675px; top:20px; font-size:xx-large; color:rgba(36, 222, 141, 0.902);'>Dream Room</a>
+        <a href="microbit.html" style='position:inherit; left:950px; top:20px; font-size:xx-large; color:burlywood;'>Microbit</a>
+        <a href="circuit.html" style='position:inherit; left:1175px; top:20px; font-size:xx-large; color:rgba(36, 222, 141, 0.902);'>Circuit</a>
+        <a href="rocket.html" style='position:inherit; left:1375px; top:20px; font-size:xx-large; color:rgba(36, 222, 141, 0.902);'>Pop Bottle Rocket</a>
+    </div>
+    <div class="first">
+        <h1 style="position:absolute; top:0%; left:60%; right:45%; top:80px; font: size 2000px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Microbit</h1>
+        <img src="Microbit/Main.jpg" alt="Main Code" style="position:absolute; left:2%; top:10%; border:6px solid black;">
+        <p style="position:absolute; left:55%; top:150px; right:16%; font-size:x-large;">When deciding what to code, I ran into a major issue. Since the microbit is a 5x5 grid, I had limited space to make a functionally difficult game. Additionally, only flashing red LEDs and buttons could interact with the player. When brainstorming ideas that fit this criteria, I looked for inspiration in arcade and 1 2 3 4 player games. I decided to code my first ever Space Invaders Game. The final product had 120+ lines of code, so let's go over the challenges, successes, and more itinerary items I had.</p>
+    </div>
+
+    <div class="Steps">
+        <img src="Microbit/Mains.jpg" alt="Main Code Image" style="position:absolute; left:2%; top:75%; border:3px dotted darkkhaki">
+        <h2 style="position:absolute; top:65%; left:34%; font-size:xx-large; font-family: Verdana, Geneva, Tahoma, sans-serif;">STEP 1</h2>
+        <p style="position:absolute; top:73%; left:36%; right:10%; font-size:x-large;">I started with the player hitbox. My "ultra 4k" invader jet for the player included 3-4 level 7 LEDs in a triangle shape, depending on whether or not the player was on the edge. It was easy enough to incorporate movement from buttons through my if commands and functions. I quickly moved onto player bullets. These were a bit more tricky, as I needed to create a Class to contain multiple functions for the bullets, including creating them, moving them, checking if they made contact, and finally destroying them. Classes take more time to build than regular functions, as you need to construct self parameters and often require seperate documents to track these. This class allowed me to sync my player and bullet hitbox, as well as create a unique type of variable that could be globally used for these bullets.</p>
+        <h2 style="position:absolute; top:102.7%; left:34%; font-size:xx-large; font-family: Verdana, Geneva, Tahoma, sans-serif;">STEP 2</h2>
+        <p style="position:absolute; top:110.7%; left:36%; right:10%; font-size:x-large;">The idea I had built in my head included enemy planes with bullets that could interact with player bullets. Unfortunately there weren't enough rows on the microbit to integrate this. I looked to the next best thing, which was dot enemies with light dot bullets. However, as time was running thin I decided to focus on adding basic functionality to the game before delving into details. I created a new class for enemies, and later decided there was only going to be one enemy at a time (though I seriously considered it capable and realistic to generate more). Enemies took a long time, as for a while my bullets were not interacting correctly with them. After a lot of coding, the enemies could die. However, I had no difficulty integrated into it! Currently, it was unfeasable to die or lose with the player character. Without enemy bullets, how could I integrate this?</p>
+        <h2 style="position:absolute; top:140%; left:34%; font-size:xx-large; font-family: Verdana, Geneva, Tahoma, sans-serif;">STEP 3</h2>
+        <p style="position:absolute; top:150%; left:36%; right:10%; font-size:x-large;">The short answer? A timer. I incorporated two simple variables to add a losing option for the player: timer and score. The timer would continuosly tick down from 20 seconds, and the score would increase until they both hit a certain amount. For the time, this was 0 seconds. For the score, it was a number between 5 and 10 enemies, depending on what I thought was fair. Whichever happened first would stop the player and inform them the result. Simple, yet the principle is integral to many games played today.A goal I really wanted to implement was randomized movement for enemies so I called the random library. A challenge I faced at this point was the speed of the enemy. Every tick, bullets were updated and so was the player. Every one of these ticks was also updating the enemy, making them virtually impossible to track. A big part of the development process was using this challenge to implement a tracking system for the ticks that had already passed. Using a basic reminder function, I could make the enemy move twice, three times, four times as slow with the change of a singular counter. And so, I achieved the goal I set of having a fun game that could so easily be expanded.</p>
+        <img src="Microbit/Functions.jpg" alt="Functions Page" style="position:absolute; left:2%; top:205%; border:3px dotted darkkhaki">
+        <h2 style="position:absolute; top:191%; left:34%; font-size:xx-large; font-family: Verdana, Geneva, Tahoma, sans-serif;">Additional Document</h2>
+        <p style="position:absolute; top:198%; left:36%; right:10%; font-size:x-large;">For this project, I used one of my favorite coding organization tactics: A completely new document! I used this document for functions and classes. Here is everything this secondary document pertained:</p>
+        <ol style="position: absolute; top:205%; left:42%; right:10%; font-size: x-large;">1. Drawing the player on the left, right, or anywhere in the middle</ol>
+        <ol style="position: absolute; top:213%; left:42%; right:10%; font-size: x-large;">2. Classifying and creating a class for bullets, including drawing them, initializing them, moving them, and destroying them</ol>
+        <ol style="position: absolute; top:221%; left:42%; right:10%; font-size: x-large;">3. Creating a class for the enemy, including initializing them, checking if they were drawn, updating them, randomizing their location and movement, and checking if the player should be awarded a point</ol>
+        <ol style="position: absolute; top:233%; left:42%; right:10%; font-size: x-large;">4. Checking if the player won! Adding music, and ending the game. This also stored the actual score variable</ol>
+
+    </div>
+
+</body>
+</html>

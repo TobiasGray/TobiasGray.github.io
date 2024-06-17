@@ -1,0 +1,17 @@
+.Phase1 {
+    position: absolute;
+    top:80px;
+    left:0px;
+    right:0px;
+    height:600px;
+    max-width: 100vw;
+}
+
+.Phase2 {
+    position: absolute;
+    top:680px;
+    left:0px;
+    right:0px;
+    height:600px;
+    max-width: 100vw;
+}

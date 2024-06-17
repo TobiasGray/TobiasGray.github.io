@@ -1,0 +1,73 @@
+.heading {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 80px;
+    background-color:#3c6db2;
+}
+.banner {
+    position: absolute;
+    top:80px;
+    left:0px;
+    right:0px;
+    bottom:52.5%;
+    background-image: url(Bgtech2.jpg);
+    max-width: 100vw;
+    max-height: 50vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.ctg1 {
+    position: absolute;
+    left:0px;
+    top:57.5%;
+    height:290px;
+    left:10%;
+    width:10%;
+    background-color:#3ABEF9;
+    border-radius:15%;
+    border:4px outset #A7E6FF;
+    border-top-color:#F1E5D1;
+    border-left-color:#F1E5D1;
+}
+.ctg2 {
+    position: absolute;
+    left:0px;
+    top:57.5%;
+    height:290px;
+    left:30%;
+    width:10%;
+    background-color:#3ABEF9;
+    border-radius:15%;
+    border:4px outset #A7E6FF;
+    border-top-color:#F1E5D1;
+    border-left-color:#F1E5D1;
+}
+.ctg3 {
+    position: absolute;
+    left:0px;
+    top:57.5%;
+    height:290px;
+    left:50%;
+    width:10%;
+    background-color:#3ABEF9;
+    border-radius:15%;
+    border:4px outset #A7E6FF;
+    border-top-color:#F1E5D1;
+    border-left-color:#F1E5D1;
+}
+.ctg4 {
+    position: absolute;
+    left:0px;
+    top:57.5%;
+    height:290px;
+    left:70%;
+    width:13%;
+    background-color:#3ABEF9;
+    border-radius:15%;
+    border:4px outset #A7E6FF;
+    border-top-color:#F1E5D1;
+    border-left-color:#F1E5D1;
+}
+
